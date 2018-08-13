@@ -9,6 +9,8 @@ To run the application, in **localhost** select the index.htm file.
 
 You may then create/save/edit SVG Control drawings.
 
+![](http://svg-control-schematics.com/Images/schematic.png)
+
 To preview how this application works go to: http://svg-control-schematics.com
 
 NOTE:To store your svg images for the Component library, the Windows IIS must have 
