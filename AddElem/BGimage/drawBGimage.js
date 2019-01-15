@@ -70,10 +70,10 @@ function placeDrawBGimage()
 var ImageHREF
 var BGimageWidth
 var BGimageHeight
-function loadBGimageFile()
+function loadBGImageFile()
 {
 
-    var cw = addElemBGimageCw
+    var cw = addElemBGImageCw
 
     var file = cw.document.querySelector('input[type=file]').files[0];
     var reader = new FileReader();
@@ -83,15 +83,33 @@ function loadBGimageFile()
             ImageHREF = reader.result
              var image = new Image();
             image.src = reader.result;
-            image.onload = function() {
+            image.onload = function()
+            {
 
-                BGimageWidth=image.naturalWidth
-                BGimageHeight=image.naturalHeight
-                cw.bgImageWidthValue.value = BGimageWidth
-                cw.bgImageHeightValue.value = BGimageHeight
+                var initWidth=image.naturalWidth
+                var initHeight=image.naturalHeight
+                if(initWidth>600||initHeight>600)
+                {
+                 if(initWidth>=initHeight)
+                    var maxSize=initWidth
+                    else
+                    var maxSize=initHeight
+
+                     var sizeRatio=600/maxSize
+                    BGImageWidth=initWidth*sizeRatio
+                    BGImageHeight=initHeight*sizeRatio
+
+                }
+                else
+                {
+                    BGImageWidth=image.naturalWidth
+                    BGImageHeight=image.naturalHeight
+                }
+
+
+                cw.bgImageWidthValue.value = BGImageWidth.toFixed(0)
+                cw.bgIimageHeightValue.value = BGImageHeight.toFixed(0)
             }
-
-
         }
         , false);
 
@@ -101,9 +119,6 @@ function loadBGimageFile()
 
     }
 }
-
-
-
 
 
 
