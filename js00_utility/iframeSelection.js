@@ -9,7 +9,7 @@ function disableAllButtons()
 
     openAddEllipseButton.disabled=true
     openAddRectButton.disabled=true
-    openAddBGimageButton.disabled=true
+    openAddBGImageButton.disabled=true
     openAddTextButton.disabled=true
     openAddPathButton.disabled=true
     openAddSymbolButton.disabled=true
@@ -35,7 +35,7 @@ function enableAllButtons()
 
     openAddEllipseButton.disabled=false
     openAddRectButton.disabled=false
-    openAddBGimageButton.disabled=false
+    openAddBGImageButton.disabled=false
     openAddTextButton.disabled=false
     openAddPathButton.disabled=false
     openAddSymbolButton.disabled=false
@@ -54,7 +54,7 @@ function enableAllButtons()
 
     openAddEllipseButton.style.borderColor=""
     openAddRectButton.style.borderColor=""
-    openAddBGimageButton.style.borderColor=""
+    openAddBGImageButton.style.borderColor=""
 
 
 
@@ -143,21 +143,21 @@ function openAddTexture()
 }
 
 
-function openAddBGimage()
+function openAddBGImage()
 {
-   if(addElemBGimageLoad==true)
-       startBGimageDraw()
-    if(document.getElementById(DrawBGimageEditId))
-    {   var cw = addElemBGimageCw
+   if(addElemBGImageLoad==true)
+       startBGImageDraw()
+    if(document.getElementById(DrawBGImageEditId))
+    {   var cw = addElemBGImageCw
         cw.editTemplateCheckDiv.style.visibility="visible"
 
 
     }
 
-        openIframe("AddElem", "addElemBGimage", 0)
+        openIframe("AddElem", "addElemBGImage", 0)
        // mySVG.setAttribute("onclick", "plantSymbolSymbol(event)")
 
-        openAddBGimageButton.style.borderStyle = "inset"
+        openAddBGImageButton.style.borderStyle = "inset"
 }
 
 function openAddGradient()
@@ -508,7 +508,7 @@ function closeIframe(name)
 
     openAddEllipseButton.style.borderStyle = ""
     openAddRectButton.style.borderStyle = ""
-    openAddBGimageButton.style.borderStyle = ""
+    openAddBGImageButton.style.borderStyle = ""
     openAddTextButton.style.borderStyle = ""
     openAddPathButton.style.borderStyle = ""
     openAddSymbolButton.style.borderStyle = ""
@@ -559,7 +559,7 @@ function closeAllFrames()
 
    openAddEllipseButton.style.borderStyle = ""
     openAddRectButton.style.borderStyle = ""
-    openAddBGimageButton.style.borderStyle = ""
+    openAddBGImageButton.style.borderStyle = ""
     openAddTextButton.style.borderStyle = ""
     openAddPathButton.style.borderStyle = ""
     openAddSymbolButton.style.borderStyle = ""
@@ -648,7 +648,7 @@ var addElemCircuitBreakerLoad = false
 var addElemSymbolEditLoad = false
 var addElemEllipseLoad = false
 var addElemRectLoad = false
-var addElemBGimageLoad = false
+var addElemBGImageLoad = false
 var addElemTextLoad = false
 var addElemPathLoad = false
 var addElemPathEditLoad = false
@@ -681,7 +681,7 @@ var addElemCircuitBreakerViz = false
 var addElemSymbolEditViz = false
 var addElemEllipseViz = false
 var addElemRectViz = false
-var addElemBGimageViz = false
+var addElemBGImageViz = false
 var addElemTextViz = false
 var addElemPathViz = false
 var addElemPathEditViz = false
@@ -714,7 +714,7 @@ var addElemButtonCw
 var addElemSymbolEditCw
 var addElemEllipseCw
 var addElemRectCw
-var addElemBGimageCw
+var addElemBGImageCw
 var addElemTextCw
 var addElemPathCw
 var addElemPathEditCw
@@ -755,7 +755,7 @@ iframeNameArray[26] = 'addElemTankLevel'
 iframeNameArray[27] = 'addElemSubstationDigital'
 iframeNameArray[28] = 'addElemVariableFrequency'
 iframeNameArray[29] = 'addElemProcessVariableChart'
-iframeNameArray[30] = 'addElemBGimage'
+iframeNameArray[30] = 'addElemBGImage'
 iframeNameArray[31] = 'addElemAutoManual'
 
 
