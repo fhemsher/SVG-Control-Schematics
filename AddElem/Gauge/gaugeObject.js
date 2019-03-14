@@ -35,6 +35,7 @@ function Gauge(placeholderName, configuration)
     {
         this.gauge = d3.select("#" + this.placeholderName)
         .attr("class", "gauge")
+        .attr("pointer-events", "none")
         .attr("width", this.config.diameter)
         .attr("height", this.config.diameter)
 
@@ -42,7 +43,8 @@ function Gauge(placeholderName, configuration)
         .attr("cx", this.config.cx)
         .attr("cy", this.config.cy)
         .attr("r", this.config.raduis)
-        .style("fill", this.config.ringColor)
+                 .attr("pointer-events", "visible")
+       .style("fill", this.config.ringColor)
         .style("stroke", "#000")
         .style("stroke-width", "0.5px");
 
@@ -52,8 +54,8 @@ function Gauge(placeholderName, configuration)
         .attr("r", 0.9 * this.config.raduis)
         .style("fill", this.config.faceColor)
         .style("stroke", "#e0e0e0")
-        .style("stroke-width", "2px");
-
+        .style("stroke-width", "2px")
+          .attr("pointer-events", "visible")
         if(this.config.greenZoneRange)
             for (var index in this.config.greenZones)
                 this.drawBand(this.config.greenZones[index].from, this.config.greenZones[index].to, self.config.greenColor);
@@ -143,8 +145,8 @@ function Gauge(placeholderName, configuration)
             }
         }
 
-        var pointerContainer = this.gauge.append("svg:g").attr("class", "pointerContainer");
-
+        var pointerContainer = this.gauge.append("svg:g").attr("class", "pointerContainer")
+                .attr("pointer-events", "none")
         var midValue = (this.config.min + this.config.max) / 2;
 
         var pointerPath = this.buildPointerPath(midValue);
@@ -166,6 +168,7 @@ function Gauge(placeholderName, configuration)
         pointerContainer.append("svg:circle")
         .attr("cx", this.config.cx)
         .attr("cy", this.config.cy)
+         .attr("pointer-events", "none")
         .attr("r", 0.12 * this.config.raduis)
         .style("fill", "#4684EE")
         .style("stroke", "#666")
