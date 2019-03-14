@@ -4,7 +4,7 @@ var SVGy
 
 function startCursorLoc()
 {
-
+ 
     MySVG.on("mousemove", function()
         {
          SVGx = d3.mouse(this)[0]
@@ -33,12 +33,13 @@ function startCursorLoc()
                 if(addElemVariableFrequencyViz==true)trackDrawVariableFrequency()
                 if(addElemProcessVariableChartViz==true)trackDrawProcessVariableChart()
                 if(addElemIconViz==true)trackDrawIcon()
+                if(addElemImageViz==true)trackDrawImage()
                 if(addElemPolygonViz==true)trackDrawPolygon()
                 if(addElemComponentViz==true)trackDrawComponent()
                 if(addElemDigitalReadoutViz==true)trackDrawDigitalReadout()
                 if(addElemAutoManualViz==true)trackDrawAutoManual()
                 if(ZoomDrawing==true)trackZoom()
-
+                 
         }
     );
 

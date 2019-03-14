@@ -28,8 +28,8 @@ var ActiveElem = null
 var Wrapper //---svg wrapper---
 var DrawX
 var DragDot //---used for circles/rects---
-var MySVG
 var ImgDragArrow
+var MySVG
 //---called via onload---
 function initD3Svg()
 {
@@ -61,7 +61,7 @@ function initD3Svg()
     .attr("markerWidth", "300")
     .attr("markerHeight", "300")
     .attr("orient", "auto")
-    .attr("fill", "RGB(0,0,0)")
+    .attr("fill", "#000000")
     .attr("stroke-linejoin", "bevel")
     .append("path")
     .attr("d", "M2 59,293 148,1 243,121 151,Z")
@@ -406,16 +406,6 @@ var defs=MySVG.append("defs")
     .attr("vector-effect", "non-scaling-stroke")
     .style("visibility", "hidden")
     .style("cursor", "default")
-    ImgDragArrow=MySVG.append("image")
-    .attr("id","imgDragArrow")
-    .attr("href","Images/ImgDragArrow.png")
-    .attr("class","dragTargetObj")
-    .attr("width","25")
-    .attr("height","25")
-    .attr("x","-12.5")
-    .attr("y","-12.5")
-    .style("visibility", "hidden")
-    .style("cursor", "nw-resize")
 
    var openerScada=MySVG.append("g")
      .attr("id","openerScadaG")
@@ -460,6 +450,16 @@ var defs=MySVG.append("defs")
    .attr("opacity","1")
    .attr("filter","url(#drop-shadow)")
    .text("SVG + JavaScript = SCADA")
+    ImgDragArrow=MySVG.append("image")
+    .attr("id","imgDragArrow")
+    .attr("href","Images/ImgDragArrow.png")
+    .attr("class","dragTargetObj")
+    .attr("width","25")
+    .attr("height","25")
+    .attr("x","-12.5")
+    .attr("y","-12.5")
+    .style("visibility", "hidden")
+    .style("cursor", "nw-resize")
 
    var svgText=MySVG.append("text")
    .attr("id","textSVG")

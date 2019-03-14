@@ -1,8 +1,9 @@
 function openHelp()
 {
-    var height=helpDiv.scrollHeight
+    var height=600
     d3.select("#helpDiv").transition().duration(800).style("height", height+"px")
     helpDiv.style.visibility="visible"
+    helpDiv.style.overflow="auto"
     hmiIntroDiv.style.visibility="hidden"
 
    componentHelpLibraryDiv.style.height="1px"
@@ -47,6 +48,10 @@ function openComponentHelp()
     isaTableCloseButton.style.visibility="hidden"
 
 }
+
+
+
+
 function closeComponentHelp()
 {
     var height=1

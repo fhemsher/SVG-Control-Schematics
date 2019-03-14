@@ -13,9 +13,11 @@ function startDragIcon(evt)
 
     if(!DraggingObjIcon &&addElemIconViz==true) //---prevents dragging conflicts on other draggable elements---
     {
-                  
+
         if(evt.target.getAttribute("class")=="dragTargetObj") //---text elem w/ tspan--
             objDragTargetIcon = evt.target
+       
+
 
         if(objDragTargetIcon)
         {
