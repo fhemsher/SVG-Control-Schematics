@@ -329,7 +329,6 @@ stroke: DarkViolet;
 
 <TABLE style=width:800px;><TR>
  <TD>
-  <button title="Show current drawing's raw SVG source" onClick=removeSCADA();svgCopy()>SVG Source</button>
   <button title="Copy SVG for other applications" onClick=removeSCADA();publishSVG()>Publish</button>
   <button id=clearButton title="Clear current SVG drawing"  onClick=removeSCADA();clearButtonClicked() >Clear/Start Over</button>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </TD>
 <TD>
@@ -374,8 +373,11 @@ stroke: DarkViolet;
 </TR>
 </TABLE>
 <center>
-<div id=svgSaveDiv class="copySource" style=display:none;height:1px;overflow:auto;width:1200px;text-align:left; /></div>
-  <div id=svgSourceDiv style=display:none;overflow:auto;width:1200px;text-align:left; /></div>
+
+<div  id=svgSaveDiv title="Click to close raw SVG Source"  onclick=closeSvgSave() class="copySource" style=display:none;height:1px;overflow:auto;width:1200px;text-align:left; /></div>
+
+
+<div id=svgSourceDiv style=display:none;overflow:auto;width:1200px;text-align:left; /></div>
 
   <div id=hmiSourceContainer style='background:#ABCDEF;border:1px solid black;border-radius:10px; padding:10px;position:fixed;top:300px;left:0px;display:none;width:360px;height:360px;text-align:left;' >
          <table style=width:100%><tr><td align=center style=width:90%>HMI Element SVG Source</td><td align=right><button onClick=closeHMISource()>X</button></td></tr></table>
@@ -423,7 +425,8 @@ created using standard SVG shape elements. The resulting svg elements are then a
 <center><h7><b>1.) Creating SVG Shape Elements</b></h7></center>
 
 <div style=text-align:justify> Each element includes its unique pane to set &amp; edit its specific values. Click on the element's button to use its pane to create and place the element in the drawing.
-<u><i> After an element is created, it can be edited by moving the cursor over the element, then <b>right-click</b> the mouse  button.</u></i>
+<br><u><i> After an element is created, it can be edited by moving the cursor over the element, then <b>right-click</b> the mouse  button.</u></i>
+<center><img style=background:linen src="Images/rightClick.png" alt="" width="48" height="65" /></center>
 </div>
 <p></p>
 <b>Paths</b> - Both linear and curved paths can be created by clicking their points on the drawing. Drag any point to modify its shape.
@@ -449,7 +452,15 @@ JavaScript and SVG source are shown for each example.
 <center>
 <a href="PubNub/GettingStarted/gettingStarted.htm" title="Getting Started: SVG SCADA via the Data Stream Network"  target="_blank"><b>Getting Started</b></a>
 
-</center>
+</center><p></p>
+        <div style=background:gainsboro;font-size:80%;padding:10px;><i>
+        <center><b>Note to SVG SCADA Web Developers...</b></center>
+        There many examples for dynamic SVG that can be applied to meeting the SCADA
+        specifications created by designers that use this application.
+        <p></p>
+        If you want to participate with a vendor to meet the SCADA specifications, then it
+        is advisable to review examples on how to create <a href="http://svgDiscovery.com" target="_blank">Dynamic SVG using JavaScript</a>.
+        </i></div>
 
 </div>
 
@@ -825,7 +836,8 @@ It includes a slider to set the output signal during Manual selection.
     <div style=text-align:justify>
     Select this to zoom into the drawing via the mousewheel.<p></p>When zoomed you may drag/drop any element: With the cursor
     over the element <b>right-click</b> the mouse button, then drag the element.
-    <p></p>To close the Mousewheel zoom feature, click the red zoom button symbol.
+    <p></p>To close the Mousewheel zoom feature, click the red zoom button symbol:
+    <img style=width:20px;height:20px;background:red; src="Images/zoomButton.png" alt="" />
     </div>
 </div>
 <div id=publishMobileDiv style='background:lightgreen;visibility:hidden;position:fixed;top:80px;left:40%;width:400px;height:1px;border:1px solid blue;border-radius:5px;padding:10px;overflow:hidden'>
@@ -989,7 +1001,7 @@ function writeEM()
     em+="gm"
     em+="ail."
     em+="com"
-   emDiv.innerHTML=em +" &nbsp;&nbsp;<span style=color:maroon>Last Update: 03/14/2019</span>"
+   emDiv.innerHTML=em +" &nbsp;&nbsp;<span style=color:maroon>Last Update: 03/17/2019</span>"
 
 }
 function openMobileHelp()
