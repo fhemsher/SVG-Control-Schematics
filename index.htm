@@ -831,7 +831,7 @@ It includes a slider to set the output signal during Manual selection.
 <button title="Close HMI Table" id=hmiTableCloseButton onmouseover=this.style.background="red"  onmouseout=this.style.background=""  style='visibility:hidden;position:fixed;top:65px;left:350px' onclick=closeHMIHelp() >X</button>
 
 
-<div style='position:fixed;top:5px;left:95%'><button onClick=zoomDrawing() title="Mousewheel Zoom Drawing" id=zoomButton style='background:transparent;border:0px;width:30px;height:30px;padding:0px'><img src="Images/zoomButton.png" width=25 height=25 alt="SVG HMI Zoom SCADA Graphs"   /></button> <button onClick=openZoomHelp() style=width:20px;height:20px;padding:0px;border:0px;background:transparent ><img src="Images/help.png"  width=20 height=20 alt="Zoom Scada Drawing"   /></button>   </div>
+<div id=zoomButtonDiv  style='position:fixed;top:5px;left:95%'><button onClick=zoomDrawing() title="Mousewheel Zoom Drawing" id=zoomButton style='background:transparent;border:0px;width:30px;height:30px;padding:0px'><img src="Images/zoomButton.png" width=25 height=25 alt="SVG HMI Zoom SCADA Graphs"   /></button> <button onClick=openZoomHelp() style=width:20px;height:20px;padding:0px;border:0px;background:transparent ><img src="Images/help.png"  width=20 height=20 alt="Zoom Scada Drawing"   /></button>   </div>
 
 <div id=zoomHelpDiv style='background:white;visibility:hidden;position:fixed;top:60px;left:70%;width:300px;height:1px;border:1px solid blue;border-radius:5px;padding:10px;overflow:hidden'>
     <table style=width:100%><td style=width:90%; align=center><h7><b>Mousewheel Zoom</b></h7></td><td align=right><button onclick=closeZoomHelp()>X</button></td></table>
