@@ -36,7 +36,9 @@ function zoomDrawing()
        ZoomDrawing=true
        closeAllFrames()
        disableAllButtons()
-       mySVG.appendChild(domDrawX) 
+       mySVG.appendChild(domDrawX)
+       zoomButtonDiv.style.visibility="visible"
+
    }
    else
       {

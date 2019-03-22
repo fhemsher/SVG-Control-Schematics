@@ -1,6 +1,7 @@
 function disableAllButtons()
 {
   selectDrawElemDiv.style.visibility="hidden"
+  zoomButtonDiv.style.visibility="hidden"
        hmiSymbolSelect.disabled=true
        hmiSymbolSelect.selectedIndex=0
       openAddComponentButton.disabled=true
@@ -29,7 +30,7 @@ function enableAllButtons()
        hmiSymbolSelect.selectedIndex=0
 
   selectDrawElemDiv.style.visibility="visible"
-
+    zoomButtonDiv.style.visibility="visible"
        openAddComponentButton.disabled=false
     openAddCircleButton.disabled=false
     openAddIconButton.disabled=false
